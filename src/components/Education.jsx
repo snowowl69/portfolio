@@ -6,7 +6,7 @@ const educationData = [
     level: 'Graduation',
     institution: 'Vellore Institute of Technology',
     location: 'Vellore',
-    score: '7.31 CGPA',
+    score: '7.51 CGPA',
     period: '2023 – Present',
     color: '#6366F1',
     icon: '🎓',
