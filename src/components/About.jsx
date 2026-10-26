@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '../hooks/useAnimations';
 
 const skillGroups = [
-  { domain: 'AI/ML', color: '#6366F1', skills: ['TensorFlow', 'PyTorch', 'scikit-learn', 'DQN', 'OpenCV', 'Pandas'] },
-  { domain: 'Systems', color: '#F59E0B', skills: ['Spark', 'Kafka', 'AWS', 'Docker', 'Microservices', 'Spring Boot'] },
-  { domain: 'Security', color: '#A855F7', skills: ['Face Recognition', 'Cybersecurity', 'Patent-level Expertise'] },
-  { domain: 'Web', color: '#22C55E', skills: ['React', 'Vite', 'TypeScript', 'MERN', 'Flask', 'Node.js'] },
-  { domain: 'Languages', color: '#22D3EE', skills: ['Python', 'Java', 'TypeScript', 'JavaScript', 'SQL', 'Bash'] },
+  { domain: 'Languages', color: '#22D3EE', skills: ['HTML5', 'CSS3', 'JavaScript', 'Python', 'Java', 'SQL'] },
+  { domain: 'Web Development', color: '#22C55E', skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Node.js', 'Express.js', 'MERN'] },
+  { domain: 'AI / ML', color: '#6366F1', skills: ['Machine Learning', 'Deep Learning (LSTM)', 'NLP (FinBERT)', 'Data Analysis', 'Python'] },
+  { domain: 'Databases & Backend', color: '#F59E0B', skills: ['MongoDB', 'PostgreSQL', 'Mongoose', 'REST APIs', 'Flask'] },
+  { domain: 'Tools & Platforms', color: '#A855F7', skills: ['Git', 'GitHub', 'CI/CD', 'JWT Auth', 'Render', 'MongoDB Atlas'] },
 ];
 
 export default function About() {
