@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import { domainColors } from '../data/projects';
 import { ExternalLink } from 'lucide-react';
 
+const GithubIcon = ({ size = 14 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+  </svg>
+);
+
 export default function ProjectCard({ project, index }) {
   const cardRef = useRef(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
@@ -22,6 +28,7 @@ export default function ProjectCard({ project, index }) {
   };
 
   const colors = domainColors[project.domain] || domainColors['Web'];
+  const hasValidLink = project.github && project.github !== '#';
 
   return (
     <motion.div
@@ -53,11 +60,11 @@ export default function ProjectCard({ project, index }) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={handleMouseLeave}
       >
-        {/* Domain tag */}
+        {/* Domain tag & GitHub link */}
         <div style={{
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'flex-start',
+          alignItems: 'center',
           marginBottom: '1rem',
         }}>
           <span style={{
@@ -75,23 +82,45 @@ export default function ProjectCard({ project, index }) {
             {colors.emoji} {project.domain}
           </span>
 
-          {/* GitHub link */}
-          <motion.a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-magnetic
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isHovered ? 1 : 0 }}
-            style={{
-              color: 'rgba(255,255,255,0.5)',
-              transition: 'color 0.3s ease',
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#fff'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
-          >
-            <ExternalLink size={16} />
-          </motion.a>
+          {/* GitHub link button */}
+          {hasValidLink && (
+            <motion.a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-magnetic
+              title={`View ${project.name} on GitHub`}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '4px 10px',
+                borderRadius: '6px',
+                fontSize: '0.7rem',
+                fontFamily: "'JetBrains Mono', monospace",
+                fontWeight: 500,
+                color: isHovered ? '#fff' : 'rgba(255,255,255,0.7)',
+                background: isHovered ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.04)',
+                border: isHovered ? '1px solid rgba(255,255,255,0.25)' : '1px solid rgba(255,255,255,0.1)',
+                transition: 'all 0.25s ease',
+                textDecoration: 'none',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = '#fff';
+                e.currentTarget.style.borderColor = colors.border;
+                e.currentTarget.style.background = colors.bg;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = isHovered ? '#fff' : 'rgba(255,255,255,0.7)';
+                e.currentTarget.style.borderColor = isHovered ? 'rgba(255,255,255,0.25)' : 'rgba(255,255,255,0.1)';
+                e.currentTarget.style.background = isHovered ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.04)';
+              }}
+            >
+              <GithubIcon size={13} />
+              <span>Code</span>
+              <ExternalLink size={11} style={{ opacity: 0.7 }} />
+            </motion.a>
+          )}
         </div>
 
         {/* Project name */}
