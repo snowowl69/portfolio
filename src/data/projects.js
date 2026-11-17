@@ -82,18 +82,9 @@ export const projects = [
     highlight: 'Offline-first desktop architecture with instant balance reconciliations and encrypted transaction storage.',
     span: 'col-span-1',
   },
+
   {
     id: 8,
-    name: 'AI NEFT Fraud Prevention System (Patented)',
-    description: 'Real-time transactional risk monitoring system that detects and prevents fraudulent NEFT transactions before settlement using behavioral biometrics and blockchain audit trails.',
-    domain: 'Security',
-    stack: ['Python', 'Blockchain', 'Behavioral Biometrics', 'Real-Time ML'],
-    github: 'https://github.com/snowowl69',
-    highlight: 'Granted Indian Patent No. 202541104671: sub-100ms multi-layer verification without interrupting legitimate banking transfers.',
-    span: 'col-span-2', // wide
-  },
-  {
-    id: 9,
     name: 'SkewShield Big Data Skew Optimizer',
     description: 'Automated data skew detection and dynamic rebalancing engine for Apache Spark and distributed analytical pipelines, eliminating partition bottlenecks.',
     domain: 'Systems',
@@ -103,17 +94,17 @@ export const projects = [
     span: 'col-span-1',
   },
   {
-    id: 10,
+    id: 9,
     name: 'Self-Driving Car (Deep Q-Learning DQN)',
     description: 'Autonomous vehicle navigation agent trained from scratch using Deep Q-Networks (DQN) with experience replay and target networks in dynamic continuous environments.',
     domain: 'AI/ML',
     stack: ['Python', 'TensorFlow', 'Reinforcement Learning', 'Gymnasium'],
     github: 'https://github.com/snowowl69',
     highlight: 'End-to-end DQN policy mastering lane centering, adaptive speed control, and multi-obstacle avoidance autonomously.',
-    span: 'col-span-1',
+    span: 'col-span-2', // wide
   },
   {
-    id: 11,
+    id: 10,
     name: 'Algorithmic Trading & Quant Strategy Engine',
     description: 'Modular high-frequency algorithmic trading pipeline with exchange WebSockets, automated Kelly criterion risk management, and multi-asset backtesting.',
     domain: 'Finance',
@@ -123,7 +114,7 @@ export const projects = [
     span: 'col-span-1',
   },
   {
-    id: 12,
+    id: 11,
     name: 'High-Availability Cloud Architecture',
     description: 'Multi-AZ fault-tolerant cloud infrastructure on AWS featuring active-passive failover, elastic load balancing, auto-scaling groups, and zero-downtime rolling deploys.',
     domain: 'Web',
