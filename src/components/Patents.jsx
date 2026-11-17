@@ -80,6 +80,22 @@ function PatentCard({ patent, index }) {
             }}>
               IP Protected
             </span>
+            {patent.status === 'Granted' && (
+              <span style={{
+                padding: '4px 12px',
+                borderRadius: '6px',
+                fontSize: '0.7rem',
+                fontFamily: "'JetBrains Mono', monospace",
+                fontWeight: 600,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                background: 'rgba(34,197,94,0.15)',
+                color: '#4ADE80',
+                border: '1px solid rgba(34,197,94,0.3)',
+              }}>
+                ✓ Granted
+              </span>
+            )}
             {patent.status === 'In Progress' && (
               <span style={{
                 padding: '4px 12px',
@@ -106,9 +122,9 @@ function PatentCard({ patent, index }) {
                 fontWeight: 600,
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
-                background: 'rgba(34,197,94,0.15)',
-                color: '#4ADE80',
-                border: '1px solid rgba(34,197,94,0.3)',
+                background: 'rgba(59,130,246,0.15)',
+                color: '#60A5FA',
+                border: '1px solid rgba(59,130,246,0.3)',
               }}>
                 📄 Filed
               </span>

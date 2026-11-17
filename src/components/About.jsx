@@ -3,9 +3,9 @@ import { useScrollAnimation } from '../hooks/useAnimations';
 
 const skillGroups = [
   { domain: 'Languages', color: '#22D3EE', skills: ['HTML5', 'CSS3', 'JavaScript', 'Python', 'Java', 'SQL'] },
-  { domain: 'Web Development', color: '#22C55E', skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Node.js', 'Express.js', 'MERN'] },
+  { domain: 'Web Development', color: '#22C55E', skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Vite'] },
   { domain: 'AI / ML', color: '#6366F1', skills: ['Machine Learning', 'Deep Learning (LSTM)', 'NLP (FinBERT)', 'Data Analysis', 'Python'] },
-  { domain: 'Databases & Backend', color: '#F59E0B', skills: ['MongoDB', 'PostgreSQL', 'Mongoose', 'REST APIs', 'Flask'] },
+  { domain: 'Databases & Backend', color: '#F59E0B', skills: ['MongoDB', 'PostgreSQL', 'REST APIs', 'Flask'] },
   { domain: 'Tools & Platforms', color: '#A855F7', skills: ['Git', 'GitHub', 'CI/CD', 'JWT Auth', 'Render', 'MongoDB Atlas'] },
 ];
 

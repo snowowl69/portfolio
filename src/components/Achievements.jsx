@@ -6,51 +6,49 @@ const certificates = [
     id: 1,
     title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
     issuer: 'Oracle',
-    date: 'June 22, 2026',
-    validUntil: 'June 22, 2028',
     credentialId: '328497315OCI25GAIOCP',
-    color: '#F80000',
-    icon: '☁️',
+    color: '#EF4444',
+    icon: '🧠',
+    description: 'Covers Large Language Models (LLMs), OCI Generative AI services, RAG architectures, vector search, prompt engineering, fine-tuning, and enterprise-grade generative AI deployment.',
     link: 'https://drive.google.com/file/d/1Ht6S5KzaXfpIYd42-Jw-Zdcp7oI31MQL/view',
   },
   {
     id: 2,
     title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
     issuer: 'Oracle',
-    date: 'May 29, 2026',
     credentialId: '328497315OCI25AICFA',
-    color: '#F80000',
+    color: '#A855F7',
     icon: '🤖',
+    description: 'Demonstrates foundational concepts of AI and machine learning, deep learning neural networks, computer vision, natural language processing, and OCI AI infrastructure.',
     link: 'https://drive.google.com/file/d/16-ja1EaFT9yQUeu7U7_T598GMdyxF0tw/view?usp=sharing',
   },
   {
     id: 3,
-    title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
-    issuer: 'Oracle',
-    date: 'May 29, 2026',
-    credentialId: '328497315OCI25FNDCFA',
-    color: '#F80000',
-    icon: '☁️',
-    link: 'https://drive.google.com/file/d/1QDjeglDR66jN70FgJC2pyx0tFadgayIA/view?usp=sharing',
-  },
-  {
-    id: 4,
     title: 'Google Analytics Certification',
     issuer: 'Google',
-    date: 'May 17, 2026',
-    validUntil: 'May 17, 2027',
     credentialId: '182623822',
     color: '#4285F4',
     icon: '📊',
+    description: 'Validates expertise in Google Analytics 4 (GA4), including measurement setup, event-based tracking, conversion funnels, audience segmentation, and actionable reporting.',
     link: 'https://drive.google.com/file/d/1hW6AwcQvE9pwGxwH1XtBbj9vKNtSByGL/view',
+  },
+  {
+    id: 4,
+    title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
+    issuer: 'Oracle',
+    credentialId: '328497315OCI25FNDCFA',
+    color: '#10B981',
+    icon: '☁️',
+    description: 'Validates core cloud architecture, compute and storage services, Virtual Cloud Networks (VCN), Identity & Access Management (IAM), Autonomous Databases, and security governance.',
+    link: 'https://drive.google.com/file/d/1QDjeglDR66jN70FgJC2pyx0tFadgayIA/view?usp=sharing',
   },
   {
     id: 5,
     title: 'Data Analytics Essentials',
     issuer: 'Cisco Networking Academy',
-    date: 'May 17, 2026',
     color: '#00BCEB',
     icon: '📈',
+    description: 'Covers core data analytics fundamentals, data cleaning and transformation, exploratory data analysis (EDA), statistical methods, and dashboard storytelling for decision-making.',
     link: 'https://drive.google.com/file/d/1IugCH7XuiPlv3ccvzisD4zoAI2VH-f9Y/view',
   }
 ];
@@ -88,7 +86,7 @@ export default function Achievements() {
           top: 0,
           bottom: 0,
           width: '2px',
-          background: 'linear-gradient(to bottom, #F80000, #4285F4, #00BCEB)',
+          background: 'linear-gradient(to bottom, #EF4444, #A855F7, #4285F4, #10B981, #00BCEB)',
           opacity: 0.3,
         }} className="timeline-vertical-line" />
 
@@ -180,41 +178,44 @@ export default function Achievements() {
                     </div>
                   </div>
 
-                  {/* Date badge */}
+                  {/* Certified badge */}
                   <div style={{
-                    padding: '6px 16px',
+                    padding: '4px 14px',
                     borderRadius: '100px',
-                    background: `${cert.color}1A`,
-                    border: `1px solid ${cert.color}44`,
+                    background: `${cert.color}15`,
+                    border: `1px solid ${cert.color}40`,
                     fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: '0.85rem',
-                    fontWeight: 700,
+                    fontSize: '0.72rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.06em',
                     color: cert.color,
                   }}>
-                    {cert.date}
+                    Certified
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-space" style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff', marginBottom: '0.3rem' }}>
+                <h3 className="font-space" style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff', marginBottom: '0.3rem', lineHeight: 1.3 }}>
                   {cert.title}
                 </h3>
 
+                {/* Details / Description */}
+                <p style={{
+                  fontSize: '0.88rem',
+                  color: 'rgba(255,255,255,0.65)',
+                  lineHeight: 1.6,
+                  margin: '0.2rem 0',
+                }}>
+                  {cert.description}
+                </p>
+
                 {/* Info row */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '0.5rem' }}>
-                  {cert.validUntil && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                      <span className="font-mono" style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>Valid Until</span>
-                      <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)' }}>{cert.validUntil}</span>
-                    </div>
-                  )}
-                  {cert.credentialId && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                      <span className="font-mono" style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>Credential ID</span>
-                      <span className="font-mono" style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)' }}>{cert.credentialId}</span>
-                    </div>
-                  )}
-                </div>
+                {cert.credentialId && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', marginTop: '0.25rem' }}>
+                    <span className="font-mono" style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Credential ID</span>
+                    <span className="font-mono" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.85)' }}>{cert.credentialId}</span>
+                  </div>
+                )}
 
                 {/* Certificate Link Button */}
                 <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>

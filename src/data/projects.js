@@ -117,9 +117,9 @@ export const projects = [
     name: 'EcoStay',
     description: 'Full-stack hotel and travel booking system with real-time availability and user auth.',
     domain: 'Web',
-    stack: ['MongoDB', 'Express', 'React', 'Node.js'],
+    stack: ['MongoDB', 'React', 'Flask', 'Tailwind CSS'],
     github: '#',
-    highlight: 'Complete MERN booking platform with payment integration and admin dashboard.',
+    highlight: 'Full-stack booking platform with payment integration and admin dashboard.',
     span: 'col-span-1',
   },
   {
@@ -196,9 +196,9 @@ export const projects = [
 
 export const techStack = [
   'Python', 'React', 'TypeScript', 'Spark', 'AWS', 'Java',
-  'TensorFlow', 'PyTorch', 'Docker', 'Node.js', 'MongoDB',
+  'TensorFlow', 'PyTorch', 'Docker', 'MongoDB',
   'Vite', 'OpenCV', 'DQN', 'Pandas', 'Flask', 'Spring Boot',
-  'Express', 'scikit-learn', 'WebSockets', 'Kafka', 'SQL',
+  'scikit-learn', 'WebSockets', 'Kafka', 'SQL',
 ];
 
 export const patents = [
@@ -210,7 +210,7 @@ export const patents = [
     status: 'Granted',
     year: '2025',
     domain: 'Cybersecurity',
-    stages: ['Filed', 'Examined', 'Granted', 'Active'],
+    stages: ['Drafting', 'Filed', 'In Progress', 'Granted'],
     currentStage: 3,
   },
   {
@@ -221,18 +221,18 @@ export const patents = [
     status: 'Granted',
     year: '2026',
     domain: 'Artificial Intelligence & Machine Learning',
-    stages: ['Filed', 'Examined', 'Granted', 'Active'],
+    stages: ['Drafting', 'Filed', 'In Progress', 'Granted'],
     currentStage: 3,
   },
   {
     id: 3,
-    title: 'FINDING',
-    number: 'Patent Filed',
-    abstract: 'A novel AI-driven system designed to detect and prevent fraudulent National Electronic Funds Transfer (NEFT) transactions in real time. The invention leverages ensemble machine learning models — combining gradient-boosted decision trees, deep neural networks, and behavioral analytics — to analyze transactional metadata, sender/receiver patterns, temporal anomalies, and device fingerprints. The system assigns a dynamic risk score to each transaction and can autonomously flag, delay, or block suspicious transfers before settlement, significantly reducing financial fraud while minimizing false positives for legitimate users.',
-    status: 'Filed',
-    year: '2025',
-    domain: 'AI / FinTech',
-    stages: ['Drafting', 'Filed', 'Under Review', 'Granted'],
-    currentStage: 1,
+    title: 'A Cryptographic Method for Automatic Message Invalidation Upon Copying, Replay, or Abnormal Transmission Delay',
+    number: 'Patent No. 202641096651',
+    abstract: 'A cryptographic mechanism for decentralized and offline-capable secure communications that automatically and irreversibly invalidates messages upon unauthorized copying, replay, or abnormal transmission delay. By cryptographically binding message decryptability to entropy-dependent verification conditions and transmission-context parameters, any misuse causes mathematical collapse of the decryption key—rendering ciphertext permanently indistinguishable from random data without reliance on external servers, synchronized clocks, or application-level deletion.',
+    status: 'In Progress',
+    year: '2026',
+    domain: 'Cryptography & Secure Communications',
+    stages: ['Drafting', 'Filed', 'In Progress', 'Granted'],
+    currentStage: 2,
   },
 ];
