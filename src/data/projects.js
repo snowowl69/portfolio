@@ -58,7 +58,7 @@ export const projects = [
     description: 'Cross-platform outreach automation system featuring a Manifest V3 Chrome Extension, Android Capacitor mobile client, dynamic email rendering, and delivery tracking.',
     domain: 'Systems',
     stack: ['Chrome Extension V3', 'Android Capacitor', 'Node.js', 'REST API'],
-    github: 'https://github.com/snowowl69/cold_email_2.0',
+    github: 'https://github.com/snowowl69/cold-email-extension',
     highlight: 'Automated recruitment and outreach pipeline with dynamic templating and real-time analytics.',
     span: 'col-span-1',
   },
