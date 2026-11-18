@@ -89,7 +89,7 @@ export const projects = [
     description: 'Automated data skew detection and dynamic rebalancing engine for Apache Spark and distributed analytical pipelines, eliminating partition bottlenecks.',
     domain: 'Systems',
     stack: ['Apache Spark', 'Python', 'Distributed Systems', 'Pandas'],
-    github: 'https://github.com/snowowl69',
+    github: 'https://github.com/snowowl69/skewshield',
     highlight: 'Eliminates straggler partitions and reduces distributed compute cluster execution time by up to 40%.',
     span: 'col-span-1',
   },
