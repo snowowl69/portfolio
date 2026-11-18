@@ -109,7 +109,7 @@ export const projects = [
     description: 'Modular high-frequency algorithmic trading pipeline with exchange WebSockets, automated Kelly criterion risk management, and multi-asset backtesting.',
     domain: 'Finance',
     stack: ['Python', 'Pandas', 'WebSockets', 'Quant Analytics', 'NumPy'],
-    github: 'https://github.com/snowowl69',
+    github: 'https://github.com/snowowl69/algorithmic-trading-system',
     highlight: 'Processes live market feeds with sub-millisecond strategy evaluations and dynamic risk draw-down protections.',
     span: 'col-span-1',
   },
