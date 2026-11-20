@@ -40,6 +40,7 @@ const internshipData = [
       { label: 'Client', value: 'British Telecom (BT)' },
       { label: 'Focus', value: 'AI/ML & Enterprise Data' },
     ],
+    certificateUrl: 'https://drive.google.com/file/d/1kJnnk-oDYmZyJK5a5e1Kx3V9hLvQrGe9/view?usp=sharing',
   },
 ];
 
@@ -376,6 +377,84 @@ export default function Experience() {
                 ))}
               </div>
             </div>
+
+            {/* Certificate Verification / Documentation CTA */}
+            {exp.certificateUrl && (
+              <div
+                style={{
+                  marginTop: '2rem',
+                  paddingTop: '1.5rem',
+                  borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  flexWrap: 'wrap',
+                  gap: '1rem',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <div
+                    style={{
+                      width: '38px',
+                      height: '38px',
+                      borderRadius: '10px',
+                      background: 'rgba(34, 211, 238, 0.12)',
+                      border: '1px solid rgba(34, 211, 238, 0.3)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '1.1rem',
+                    }}
+                  >
+                    📜
+                  </div>
+                  <div>
+                    <div style={{ color: '#FFFFFF', fontSize: '0.92rem', fontWeight: 600, fontFamily: "'Space Grotesk', sans-serif" }}>
+                      Internship Certificate & Report
+                    </div>
+                    <div style={{ color: 'rgba(255, 255, 255, 0.45)', fontSize: '0.75rem', fontFamily: "'JetBrains Mono', monospace" }}>
+                      Verified Industry Credentials · PDF Document
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href={exp.certificateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: '10px 22px',
+                    borderRadius: '12px',
+                    background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(34, 211, 238, 0.9))',
+                    color: '#FFFFFF',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    boxShadow: '0 4px 16px rgba(99, 102, 241, 0.3)',
+                    transition: 'all 0.25s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 6px 22px rgba(34, 211, 238, 0.45)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 16px rgba(99, 102, 241, 0.3)';
+                  }}
+                >
+                  <span>View Certificate (PDF)</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            )}
           </motion.div>
         ))}
       </div>
