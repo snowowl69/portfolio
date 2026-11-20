@@ -98,8 +98,8 @@ export const projects = [
     name: 'Self-Driving Car (Deep Q-Learning DQN)',
     description: 'Autonomous vehicle navigation agent trained from scratch using Deep Q-Networks (DQN) with experience replay and target networks in dynamic continuous environments.',
     domain: 'AI/ML',
-    stack: ['Python', 'TensorFlow', 'Reinforcement Learning', 'Gymnasium'],
-    github: 'https://github.com/snowowl69',
+    stack: ['Python', 'PyTorch', 'Reinforcement Learning', 'Pygame'],
+    github: 'https://github.com/snowowl69/self-driving-car-dqn',
     highlight: 'End-to-end DQN policy mastering lane centering, adaptive speed control, and multi-obstacle avoidance autonomously.',
     span: 'col-span-2', // wide
   },
