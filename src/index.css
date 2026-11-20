@@ -322,9 +322,20 @@ body, a, button, input, textarea {
   gap: 1.25rem;
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 @media (max-width: 1024px) {
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
   }
 }
 
@@ -332,8 +343,9 @@ body, a, button, input, textarea {
   .bento-grid {
     grid-template-columns: 1fr;
   }
-  .col-span-2 {
-    grid-column: span 1;
+  .col-span-2,
+  .col-span-1 {
+    grid-column: span 1 / span 1 !important;
   }
 }
 
