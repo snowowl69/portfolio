@@ -119,7 +119,7 @@ export const projects = [
     description: 'Multi-AZ fault-tolerant cloud infrastructure on AWS featuring active-passive failover, elastic load balancing, auto-scaling groups, and zero-downtime rolling deploys.',
     domain: 'Web',
     stack: ['AWS EC2', 'Auto-Scaling', 'Route 53', 'Terraform', 'Nginx'],
-    github: 'https://github.com/snowowl69',
+    github: 'https://github.com/snowowl69/high-availability-cloud-architecture',
     highlight: 'Engineered for 99.99% availability with automated health monitoring and self-healing disaster recovery.',
     span: 'col-span-1',
   },
