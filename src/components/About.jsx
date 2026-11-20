@@ -23,13 +23,41 @@ export default function About() {
           transition={{ duration: 0.8 }}
           style={{ flex: '0 0 320px', position: 'relative' }}
         >
-          <div style={{ width: '320px', height: '400px', borderRadius: '20px', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ width: '320px', height: '420px', borderRadius: '20px', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', inset: '-3px', borderRadius: '22px', background: 'conic-gradient(from 0deg, #6366F1, #F59E0B, #22D3EE, #A855F7, #6366F1)', animation: 'border-rotate 4s linear infinite', zIndex: 0 }} />
-            <div style={{ position: 'absolute', inset: '3px', borderRadius: '18px', background: 'linear-gradient(135deg, #12121A, #1A1A2E)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1 }}>
-              <div style={{ textAlign: 'center', padding: '2rem' }}>
-                <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'linear-gradient(135deg, #6366F1, #F59E0B)', margin: '0 auto 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3rem', fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700 }}>R</div>
-                <p className="font-space" style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>RAGHAV GOYAL</p>
-                <p className="font-mono" style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em' }}>ENGINEER · INVENTOR</p>
+            <div style={{ position: 'absolute', inset: '3px', borderRadius: '18px', background: '#0D0E15', overflow: 'hidden', zIndex: 1, display: 'flex', flexDirection: 'column' }}>
+              <img
+                src="/raghav.png"
+                alt="Raghav Goyal"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center top',
+                  display: 'block',
+                  transition: 'transform 0.5s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              />
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  background: 'linear-gradient(to top, rgba(13, 14, 21, 0.95) 0%, rgba(13, 14, 21, 0.65) 60%, transparent 100%)',
+                  padding: '1.75rem 1.25rem 1.25rem',
+                  textAlign: 'center',
+                  backdropFilter: 'blur(4px)',
+                }}
+              >
+                <p className="font-space" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff', marginBottom: '0.25rem', letterSpacing: '-0.01em' }}>RAGHAV GOYAL</p>
+                <p className="font-mono" style={{ fontSize: '0.72rem', color: '#22D3EE', letterSpacing: '0.12em', fontWeight: 600 }}>ENGINEER · INVENTOR</p>
               </div>
             </div>
           </div>
