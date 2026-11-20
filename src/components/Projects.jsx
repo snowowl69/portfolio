@@ -43,7 +43,7 @@ export default function Projects() {
           fontSize: '0.85rem',
           letterSpacing: '0.05em',
         }}>
-          20+ systems built. Every domain. No limits.
+          10+ production systems built. Every domain. No limits.
         </p>
       </motion.div>
 

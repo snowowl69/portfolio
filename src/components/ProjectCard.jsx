@@ -131,7 +131,24 @@ export default function ProjectCard({ project, index }) {
           marginBottom: '0.5rem',
           lineHeight: 1.3,
         }}>
-          {project.name}
+          {hasValidLink ? (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: 'inherit',
+                textDecoration: 'none',
+                transition: 'color 0.2s ease',
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = colors.text; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#fff'; }}
+            >
+              {project.name}
+            </a>
+          ) : (
+            project.name
+          )}
         </h3>
 
         {/* Description */}

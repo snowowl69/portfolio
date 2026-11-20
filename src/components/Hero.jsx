@@ -35,7 +35,7 @@ function TypewriterText({ text, delay = 0, speed = 1 }) {
 }
 
 const stats = [
-  { value: '20+', label: 'Projects Built' },
+  { value: '10+', label: 'Production Systems' },
   { value: '2', label: 'Patents Granted' },
   { value: '1', label: 'Patent In Progress' },
 ];
@@ -43,7 +43,7 @@ const stats = [
 const floatingCards = [
   { name: 'Chess Engine', domain: 'AI', color: '#6366F1' },
   { name: 'WatchGuard', domain: 'Security', color: '#A855F7' },
-  { name: 'algo_trading', domain: 'Finance', color: '#6B7280' },
+  { name: 'Algo Trading', domain: 'Finance', color: '#10B981' },
   { name: 'KneeSync', domain: 'IoT', color: '#EF4444' },
 ];
 
@@ -156,7 +156,7 @@ export default function Hero() {
               fontFamily: "'Inter', sans-serif",
             }}
           >
-            Raghav Goyal · Engineer · Inventor · 2× Patent Holder · 1 Patent Undergoing · Builder of 20+ Systems
+            Raghav Goyal · Engineer · Inventor · 2× Patent Holder · 1 Patent In Progress · Builder of 10+ Systems
           </motion.p>
 
           {/* Stat pills */}
